@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <h2>Bubbles</h2>
+    </section>
+
+    <script>
+        function createBubble() {
+            const section = document.querySelector('section');
+            const createElement = document.createElement('span');
+            var size = Math.random() * 60;
+            var hue =Math.random() * 360;
+            createElement.style.width = size + 'px';
+            createElement.style.height = size + 'px';
+            createElement.style.left = Math.random() * innerWidth + "px";
+            createElement.style.boxShadow = `inset 0 0 10px hsl(${hue},100%,50%)`;
+            // createElement.textContent= 'techvai';
+            // createElement.style.color = '#fff';
+            section.appendChild(createElement);
+
+            setTimeout(() => {
+                createElement.remove();
+            }, 4000)
+        }
+
+        setInterval(createBubble, 50);
+    </script>
+</body>
+
+</html>

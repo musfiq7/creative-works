@@ -1,0 +1,79 @@
+
+@font-face {
+    font-family: myFont;
+    src: url(Rude.ttf);
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 250px;
+    height: 250px;
+    border: 1px solid #ddd;
+    }
+
+    #mainView{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+  
+
+
+    #mainView h3::after{
+        
+        transform: translate(-50%, -50%);
+        content: '1';
+        color: blue;
+        font-family: myFont;
+        font-size: 42px;
+        font-weight: bolder;
+        animation: countDown 6s linear;
+        animation-fill-mode: forwards;
+        
+    }
+
+    @keyframes countDown{
+        0%{
+            content: '1'; 
+            font-size: 42px;
+        }
+        20%{
+            content: '2'; 
+            font-size: 42px;
+        }
+        40%{
+            content: '3'; 
+            font-size: 42px;
+        }
+        60%{
+            content: '4'; 
+            font-size: 42px;
+        }
+        80%{
+            content: '5'; 
+            font-size: 42px;
+           
+        }
+        100%{
+            content: 'Thank You'; 
+            
+            font-family: myFont;
+            font-size: 42px;
+            font-weight: bolder;
+           
+            
+        }
+    }
+   
+

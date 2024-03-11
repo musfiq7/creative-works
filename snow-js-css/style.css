@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background: url('bg.jpg');
+    
+    overflow: hidden; */
+}
+
+section{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #111;
+    background: url('bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section h2 {
+    font-size: 5em;
+    color: #333; 
+}
+
+#pseudo{
+   
+position: absolute;
+bottom: 0;
+left: 0;
+}
+
+#pseudo::after{
+    content: url('jacket1.jpg');
+   
+    animation: productDisplay 5s linear infinite;
+}
+
+@keyframes productDisplay{
+    0%{
+        content: url('jacket1.png');
+    }
+    50%{
+        content: url('jacket2.png');
+    }
+    100%{
+        content: url('jacket3.png');
+    }
+}
+
+section span{
+    position: absolute;
+    top: 0px;
+    /* background: #C9B15E; */
+   /* border-radius:  250%  0 250% 0; */
+    pointer-events: none;
+    /* box-shadow: inset 0 0 10px rgb(0,255,255); */
+    transform: rotateY(60deg) skewY( 6deg);
+    animation: animate 6s linear infinite;
+    /* animation-direction: alternate; */
+}
+
+@keyframes animate{
+    0%{
+        transform:  translateY(0) translateX(0) scale(0.5);
+       
+       
+        
+    }
+    
+    100%{
+        transform:  translateY(18000%) translateX(50px) scale(1.5);;
+        
+      
+    }
+}

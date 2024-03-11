@@ -1,0 +1,361 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../mixed soft/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../mixed soft/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../mixed soft/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../mixed soft/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../mixed soft/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../mixed soft/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../mixed soft/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../mixed soft/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../mixed soft/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* calculate the diagonal */
+/* consider equilateral triangle*/
+/*number of petals */
+/* line 47, ../sass/screen.scss */
+body {
+  background: #bbb;
+}
+
+/* line 51, ../sass/screen.scss */
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 56, ../sass/screen.scss */
+.wrapper {
+  position: relative;
+  width: 15em;
+  height: 15em;
+  border-radius: 0%;
+  margin: 0 auto;
+}
+
+/* line 64, ../sass/screen.scss */
+.core {
+  position: absolute;
+  top: 5em;
+  left: 5em;
+  width: 5em;
+  height: 5em;
+  background: radial-gradient(ellipse at center, #f7bd00 0%, #f7bd00 52%, #f79800 67%, #f79800 100%);
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  transition: opacity 0.25s ease-in-out;
+  opacity: 1;
+}
+/* line 77, ../sass/screen.scss */
+.core:hover {
+  opacity: 0.85;
+}
+
+/* line 82, ../sass/screen.scss */
+.petal-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15em;
+  height: 15em;
+}
+
+/* line 99, ../sass/screen.scss */
+.petal {
+  position: absolute;
+  width: 2.8867513459em;
+  height: 2.5em;
+  background: linear-gradient(135deg, #e700fc 0%, #ff5bff 75%, #ffc1ff 100%);
+  border-radius: 0 50% 50% 50%;
+  box-shadow: -2px -2px 20px rgba(255, 255, 255, 0.5) inset, 0px 0px 2px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  cursor: pointer;
+  overflow: hidden;
+  transition: opacity 0.25s ease-in-out;
+  opacity: 1;
+  /*&:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $petal-col;
+    box-shadow: -2px -2px 20px rgba(255,255,255,0.5) inset;
+    
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+    
+    
+    &:hover {
+      opacity: 0.0;
+    }
+  }*/
+}
+/* line 114, ../sass/screen.scss */
+.petal:hover {
+  opacity: 0.5;
+}
+/* line 140, ../sass/screen.scss */
+.petal:nth-child(1) {
+  animation: ani1 2s ease-in-out infinite;
+  animation-delay: 0s;
+  transform: translateY(6.25em) translateX(11.056624327em) rotate(-30deg) skewX(30deg) scale(1);
+}
+/* line 140, ../sass/screen.scss */
+.petal:nth-child(2) {
+  animation: ani2 2s ease-in-out infinite;
+  animation-delay: 0.1666666667s;
+  transform: translateY(8.75em) translateX(10.3867513459em) rotate(0deg) skewX(30deg) scale(1);
+}
+/* line 140, ../sass/screen.scss */
+.petal:nth-child(3) {
+  animation: ani3 2s ease-in-out infinite;
+  animation-delay: 0.3333333333s;
+  transform: translateY(10.5801270189em) translateX(8.556624327em) rotate(30deg) skewX(30deg) scale(1);
+}
+/* line 140, ../sass/screen.scss */
+.petal:nth-child(4) {
+  animation: ani4 2s ease-in-out infinite;
+  animation-delay: 0.5s;
+  transform: translateY(11.25em) translateX(6.056624327em) rotate(60deg) skewX(30deg) scale(1);
+}
+/* line 140, ../sass/screen.scss */
+.petal:nth-child(5) {
+  animation: ani5 2s ease-in-out infinite;
+  animation-delay: 0.6666666667s;
+  transform: translateY(10.5801270189em) translateX(3.556624327em) rotate(90deg) skewX(30deg) scale(1);
+}
+/* line 140, ../sass/screen.scss */
+.petal:nth-child(6) {
+  animation: ani6 2s ease-in-out infinite;
+  animation-delay: 0.8333333333s;
+  transform: translateY(8.75em) translateX(1.7264973081em) rotate(120deg) skewX(30deg) scale(1);
+}
+/* line 140, ../sass/screen.scss */
+.petal:nth-child(7) {
+  animation: ani7 2s ease-in-out infinite;
+  animation-delay: 1s;
+  transform: translateY(6.25em) translateX(1.056624327em) rotate(150deg) skewX(30deg) scale(1);
+}
+/* line 140, ../sass/screen.scss */
+.petal:nth-child(8) {
+  animation: ani8 2s ease-in-out infinite;
+  animation-delay: 1.1666666667s;
+  transform: translateY(3.75em) translateX(1.7264973081em) rotate(180deg) skewX(30deg) scale(1);
+}
+/* line 140, ../sass/screen.scss */
+.petal:nth-child(9) {
+  animation: ani9 2s ease-in-out infinite;
+  animation-delay: 1.3333333333s;
+  transform: translateY(1.9198729811em) translateX(3.556624327em) rotate(210deg) skewX(30deg) scale(1);
+}
+/* line 140, ../sass/screen.scss */
+.petal:nth-child(10) {
+  animation: ani10 2s ease-in-out infinite;
+  animation-delay: 1.5s;
+  transform: translateY(1.25em) translateX(6.056624327em) rotate(240deg) skewX(30deg) scale(1);
+}
+/* line 140, ../sass/screen.scss */
+.petal:nth-child(11) {
+  animation: ani11 2s ease-in-out infinite;
+  animation-delay: 1.6666666667s;
+  transform: translateY(1.9198729811em) translateX(8.556624327em) rotate(270deg) skewX(30deg) scale(1);
+}
+/* line 140, ../sass/screen.scss */
+.petal:nth-child(12) {
+  animation: ani12 2s ease-in-out infinite;
+  animation-delay: 1.8333333333s;
+  transform: translateY(3.75em) translateX(10.3867513459em) rotate(300deg) skewX(30deg) scale(1);
+}
+
+@keyframes ani1 {
+  0% {
+    transform: translateY(6.25em) translateX(11.056624327em) rotate(-30deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(6.25em) translateX(11.4227408505em) rotate(-30deg) skewX(30deg) scale(1.1464466094);
+  }
+  100% {
+    transform: translateY(6.25em) translateX(11.056624327em) rotate(-30deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani2 {
+  0% {
+    transform: translateY(8.75em) translateX(10.3867513459em) rotate(0deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(8.9330582618em) translateX(10.7038175561em) rotate(0deg) skewX(30deg) scale(1.1464466094);
+  }
+  100% {
+    transform: translateY(8.75em) translateX(10.3867513459em) rotate(0deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani3 {
+  0% {
+    transform: translateY(10.5801270189em) translateX(8.556624327em) rotate(30deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(10.897193229em) translateX(8.7396825888em) rotate(30deg) skewX(30deg) scale(1.1464466094);
+  }
+  100% {
+    transform: translateY(10.5801270189em) translateX(8.556624327em) rotate(30deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani4 {
+  0% {
+    transform: translateY(11.25em) translateX(6.056624327em) rotate(60deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(11.6161165235em) translateX(6.056624327em) rotate(60deg) skewX(30deg) scale(1.1464466094);
+  }
+  100% {
+    transform: translateY(11.25em) translateX(6.056624327em) rotate(60deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani5 {
+  0% {
+    transform: translateY(10.5801270189em) translateX(3.556624327em) rotate(90deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(10.897193229em) translateX(3.3735660653em) rotate(90deg) skewX(30deg) scale(1.1464466094);
+  }
+  100% {
+    transform: translateY(10.5801270189em) translateX(3.556624327em) rotate(90deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani6 {
+  0% {
+    transform: translateY(8.75em) translateX(1.7264973081em) rotate(120deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(8.9330582618em) translateX(1.409431098em) rotate(120deg) skewX(30deg) scale(1.1464466094);
+  }
+  100% {
+    transform: translateY(8.75em) translateX(1.7264973081em) rotate(120deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani7 {
+  0% {
+    transform: translateY(6.25em) translateX(1.056624327em) rotate(150deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(6.25em) translateX(0.6905078035em) rotate(150deg) skewX(30deg) scale(1.1464466094);
+  }
+  100% {
+    transform: translateY(6.25em) translateX(1.056624327em) rotate(150deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani8 {
+  0% {
+    transform: translateY(3.75em) translateX(1.7264973081em) rotate(180deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(3.5669417382em) translateX(1.409431098em) rotate(180deg) skewX(30deg) scale(1.1464466094);
+  }
+  100% {
+    transform: translateY(3.75em) translateX(1.7264973081em) rotate(180deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani9 {
+  0% {
+    transform: translateY(1.9198729811em) translateX(3.556624327em) rotate(210deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(1.602806771em) translateX(3.3735660653em) rotate(210deg) skewX(30deg) scale(1.1464466094);
+  }
+  100% {
+    transform: translateY(1.9198729811em) translateX(3.556624327em) rotate(210deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani10 {
+  0% {
+    transform: translateY(1.25em) translateX(6.056624327em) rotate(240deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(0.8838834765em) translateX(6.056624327em) rotate(240deg) skewX(30deg) scale(1.1464466094);
+  }
+  100% {
+    transform: translateY(1.25em) translateX(6.056624327em) rotate(240deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani11 {
+  0% {
+    transform: translateY(1.9198729811em) translateX(8.556624327em) rotate(270deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(1.602806771em) translateX(8.7396825888em) rotate(270deg) skewX(30deg) scale(1.1464466094);
+  }
+  100% {
+    transform: translateY(1.9198729811em) translateX(8.556624327em) rotate(270deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani12 {
+  0% {
+    transform: translateY(3.75em) translateX(10.3867513459em) rotate(300deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(3.5669417382em) translateX(10.7038175561em) rotate(300deg) skewX(30deg) scale(1.1464466094);
+  }
+  100% {
+    transform: translateY(3.75em) translateX(10.3867513459em) rotate(300deg) skewX(30deg) scale(1);
+  }
+}

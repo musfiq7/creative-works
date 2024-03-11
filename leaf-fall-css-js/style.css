@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section h2 {
+    font-size: 5em;
+    color: #333; 
+}
+
+section span{
+    position: absolute;
+    top: 0px;
+    /* background: #C9B15E; */
+   /* border-radius:  250%  0 250% 0; */
+    pointer-events: none;
+    /* box-shadow: inset 0 0 10px rgb(0,255,255); */
+    transform: rotateY(60deg) skewY( 6deg);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform:  translateY(0);
+       
+        
+    }
+    
+    100%{
+        transform:  translateY(1200%);
+      
+    }
+}

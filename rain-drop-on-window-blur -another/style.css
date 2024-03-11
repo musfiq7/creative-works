@@ -1,0 +1,113 @@
+body {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  
+  
+    }
+    .container {
+      width: 100vw;
+      width: 100%;
+      height: 100vh;
+      height: 100%;
+     
+      position: absolute;
+      
+     
+     
+    }
+    
+    .image-container {
+      width: 100%;
+     
+      height: 100%;
+      
+      overflow: hidden;
+      position: absolute;
+     
+    }
+
+    #overlay{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      /* background: transparent; */
+      z-index: 20;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    #overlay h2{
+      font-family: cursive;
+      font-size: 4.5em;
+     
+      color: transparent;
+      background: url('praveen-kumar-mathivanan-j7qJLn4Chzs-unsplash.jpg');
+     
+      background-clip: text;
+      -webkit-background-clip: text;
+      animation: anim 4s linear infinite ;
+      /* animation-direction: alternate; */
+    }
+    
+    #overlay h2::after{
+      content: '20% OFF';
+      color: transparent;
+      color: greenyellow;
+     
+      text-shadow: 0 0 3px orange, 0 0 6px red, 0 0 9px blue, 0 0 12px fuchsia;
+      animation: textChange 5s linear infinite;
+      display: block;
+      }
+
+    #overlay h2::after{
+      content:'';
+    }
+
+    #btn{
+      width: 200px;
+      height: 60px;
+      background: orangered;
+      color: #fff;
+      display: block;
+     margin-left: -20%;
+     border-radius: 10px;
+    font-family: sans-serif;
+    font-size: 20px;
+     border: none;
+    }
+
+    @keyframes anim {
+      0%{
+        background-position-Y: 0px;
+        background-position-x: 0px;
+       
+        
+       
+      }
+      100%{
+        background-position-Y: 100px;
+        background-position-x: 50px;
+        
+        
+       
+      }
+    }
+
+    @keyframes textChange {
+      0%{
+        content: '20% OFF';
+       
+        
+       
+      }
+      100%{
+        content: 'Hurry Up !';
+        
+        
+       
+      }
+    }
+

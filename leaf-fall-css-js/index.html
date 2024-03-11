@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+      <h2>চলে যায় বসন্তের দিনগুলি .... </h2>
+    </section>
+
+    <script>
+   function createLeaf(){
+    var section = document.querySelector('section');
+   var leaf = document.createElement('span');
+   var size = Math.random() * 50;
+   var hue = Math.random() * 97;
+   var color_light = Math.random()* 58 + "%"
+   leaf.style.width = size + 'px';
+   leaf.style.height = size + 'px';
+   leaf.style.left = Math.random() * innerWidth + 'px';
+   leaf.style.borderRadius = `0% 60%`;
+   leaf.style.background = `hsl(${hue}, 50%, ${color_light})`;
+   section.appendChild(leaf);
+
+   setTimeout(() => {
+       leaf.remove();
+   },4000);
+   }
+    
+    setInterval(createLeaf,50);
+    </script>
+</body>
+</html>
